@@ -13,250 +13,275 @@
     />
   </head>
   <body>
-    <style>
-      .img-fluid {
-        width: 100%;
+    <style> 
+    .carosel-height{
+      height: 70vh;
+    }
+    .carosal-image{
+      height: 70vh;
+    }
+    @media only screen and (min-width:767px) {
+      .navbar {
+      display: flex ! important;
       }
-      .home {
-        padding-left: 110px;
+      .burger {
+        display: none ! important;
+     }
+    }
+    @media only screen and (max-width:767px){
+      .navbar {
+      display: none ! important;
       }
-      .footer {
-        padding-left: 110px;
+      .burger {
+        display: flex ! important;
+     }
+    }
+    @media only screen and (max-width:767px){
+      .futer {
+      display: none;
       }
-      .hyper {
-      
-        display: flex;
-      justify-content: space-between;
-      justify-content: space-around; 
     }
-   
-    .helloo {
-      display: flex;
-      justify-content: space-between;
-      justify-content: space-around;
+    @media only screen and (max-width:767px){
+      .futr{
+      padding-right: 100px;
+      }
     }
-    .card-title {
-      color: blue;
-    }
-    .carousel-item-active {
-     float:right;
-    margin-right: 0px;
-    margin-top: 0px;  
-    }
-    .para {
-      margin-left: 98px;
-      margin-top: 250px;
-    }
-    .carosel-image{
-      height: 80vh;
-    }
-    .carosel-image{
-      height: 80vh;
-      max-width: 100%;
-  /* height: auto; */
-  object-fit: cover;
-    }
- 
     </style>
-    <div id="carouselExampleIndicators" class="carousel slide carosel-image" data-bs-ride="true">
+   <div class="style container-fluid bg-dark">
+    <nav class="navbar burger bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" href="#"><h5>Start Bootstrap</h5></a>
+        <button class="navbar-toggler bg-light m-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-top bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">Start Bootstrap</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="#">Service</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active dropdown-toggle text-light"aria-current="page" href="#">Portfolio</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link active dropdown-toggle text-light"aria-current="page" href="#">Blog</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link active dropdown-toggle text-light"aria-current="page" href="#">Other Pages</a>
+              </li> 
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Start Bootstrap -->
+    <div class="row navbar">
+      <div class="col-md-6 mt-0.5 pb-1 text-light" style="padding-left: 50px;"><p><h5>Start Bootstrap</h5></p></div>
+      <div class="col-md-6 mt-2.5 d-flex justify-content-around" style="color: #b3b3b3;">
+        <a>About</a>
+        <a>Service</a>
+        <a>Contact</a>
+        <span class=" dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Portfolio
+        </span>
+        <span class=" dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Blog
+        </span>
+        <span class=" dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Other Pages
+        </span>
+      </div>
+     </div>
+   </div>
+   <!-- carousel -->
+  <div id="carouselExampleCaptions" class="md-12 sm-12 carousel slide img-slide carosel-height" data-bs-ride="false">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="./assests/Picture2.png" class="d-block carosel-image img-fluid" alt="...">
+        <img src="./assests/carousel img.png" class="d-block img-fluid carosal-image w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
       </div>
       <div class="carousel-item">
-        <img src="./assests/Picture3.png" class="d-block carosel-image  img-fluid" alt="...">
+        <img src="./assests/carousel img.png" class="d-block w-100 img-fluid carosal-image" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
       </div>
       <div class="carousel-item">
-        <img src="./assests/Picture4.png" class="d-block  carosel-image img-fluid" alt="...">
+        <img src="./assests/carousel img.png" class="d-block w-100 img-fluid carosal-image" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-    <br />
-    <br><br><br>
     <!-- phase 2 -->
-    <h1 class="home">Welcome to modern Business</h1>
-    <br><br><br>
-    <div class="hyper">
-      <div class="card border mb-3" style="max-width: 32rem;">
-          <div class="card-header bg-transparent border"><h3>Card Title</h3></div>
-          <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text"><h5>Some quick example text to build on the card title and make up the bulk of the card's
-               content Lorem ipsum dolor sit amet crossorigin</h5>
-               <br>
-          </div>
-          <div class="card-footer bg-transparent border">
-            <button class="btn btn-primary btn-sm" style="height: 50px; width: 150px"><h5>Learn More</h5></button>
-          </div>
-        </div>
-        <!-- 2 -->
-        <div class="card border mb-3" style="max-width: 32rem;height: 500px;">
-          <div class="card-header bg-transparent border"><h3>Card Title</h3></div>
-          <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text"><h5>Some Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et modi molestiae sit, reiciendis voluptate ut suscipit alias optio! Pariatur, expedita. quick example text to build on the card title and make up the bulk of the card's
-               content Lorem ipsum dolor sit amet crossorigin</h5>
-               <br>
-          </div>
-          <div class="card-footer bg-transparent border">
-            <button class="btn btn-primary btn-sm" style="height: 50px; width: 150px"><h5>Learn More</h5></button>
-          </div>
-        </div>
-        <!-- 3 -->
-        <div class="card border mb-3" style="max-width: 32rem;">
-          <div class="card-header bg-transparent border"><h3>Card Title</h3></div>
-          <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text"><h5>Some quick example text to build on the card title and make up the bulk of the card's
-               content Lorem ipsum dolor sit amet crossorigin</h5>
-               <br>
-          </div>
-          <div class="card-footer bg-transparent border">
-            <button class="btn btn-primary btn-sm" style="height: 50px; width: 150px"><h5>Learn More</h5></button>
-          </div>
-        </div>
+    <div class="container-fluid p-5">
+      <h1>Welcome to Modern Business</h1>
+  <div class="row">
+    <div class="col-md-4  mb-4">
+    <div class="card " style="height: 60vh;">
+      <div class="card-header"><h4>Card Title</h4></div>
+      <div class="card-body">
+      <h6><p class="card-text">Some quick Lorem ipsum dolor sit Lorem ipsum dolor sit amet. amet consectetur adipisicing elit. Molestiae, qui? example text to buildur adipisicing elit. Magnam eum quisquam, cum similique ipsam distinctio. up the bulk of the card's content.</p></h6>
       </div>
-    <br><br><br><br>
-      <!-- image line -->
-
-      <div class="helloo">
-        <div class="card" id="hello1" style="max-width: 32rem;height: 650px;">
-          <img
-            src="https://www.deguma.com/files/grafiken/team-neu/Platzhalter.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h3 class="card-title">Project One</h3>
-            <p class="card-text">
-              <h5>Some quick example text to build on the card title and make up the
-              bulk of the card's content Lorem ipsum dolor, sit amet consectetur
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit beatae,
-               praesentium deserunt doloremque vitae labore!adipisicing elit. Laudantium maiores, tempore officia ipsam impedit
-              enim..</h5>
-            </p>
-          </div>
-        </div>
-        <!-- no 2 -->
-        <div class="card" id="hello2" style="max-width: 32rem;height: 650px;">
-          <img
-            src="https://www.deguma.com/files/grafiken/team-neu/Platzhalter.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h3 class="card-title">Project Two</h3>
-            <p class="card-text">
-            <h5>Some quick example text to build on the card title and make up the
-              bulk of the card's content Lorem ipsum dolor, sit amet consectetur
-              adipisicing elit. Laudantium maiores, tempore officia ipsam impedit
-              enim..</h5>
-            </p>
-          </div>
-        </div>
-        <!-- no 3 -->
-        <div class="card" id="hello2" style="max-width: 32rem;height: 650px;">
-          <img
-            src="https://www.deguma.com/files/grafiken/team-neu/Platzhalter.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h3 class="card-title">Project Three</h3>
-            <p class="card-text">
-            <h5>Some quick example text to build on the card title and make up the
-              bulk of the card's content Lorem ipsum dolor, sit amet consectetur
-              adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit dolore recusandae maiores ex cupiditate voluptatibus? Laudantium maiores, tempore officia ipsam impedit
-              enim..</h5>
-            </p>
-          </div>
-        </div>
-      </div>
-      <br><br><br><br>
-      <!-- image 2 -->
-      <div class="helloo">
-        <div class="card" id="hello1" style="max-width: 32rem;height: 650px;">
-          <img
-            src="https://www.deguma.com/files/grafiken/team-neu/Platzhalter.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h3 class="card-title">Project Four</h3>
-            <p class="card-text">
-              <h5> Some quick example text to build on the card title and make up the
-              bulk of the card's content Lorem ipsum dolor, sit amet consectetur
-              adipisicing elit. Laudantium maiores, tempore officia ipsam impedit
-              enim..</h5>
-            </p>
-          </div>
-        </div>
-        <!-- no 2 -->
-        <div class="card" id="hello2" style="max-width: 32rem;height: 650px;">
-          <img
-            src="https://www.deguma.com/files/grafiken/team-neu/Platzhalter.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h3 class="card-title">Project Five</h3>
-            <p class="card-text">
-            <h5> Some quick example text to build on the card title and make up the
-              bulk of the card's content Lorem ipsum dolor, sit amet consectetur
-              adipisicing elit. Laudantium maiores, tempore officia ipsam impedit
-              enim..</h5>
-            </p>
-          </div>
-        </div>
-        <!-- no 3 -->
-        <div class="card" id="hello2" style="max-width: 32rem;height: 650px;">
-          <img
-            src="https://www.deguma.com/files/grafiken/team-neu/Platzhalter.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h3 class="card-title">Project Six</h3>
-            <p class="card-text">
-            <h5>Some quick example text to build on the card title and make up the
-              bulk of the card's content Lorem ipsum dolor, sit amet consectetur
-              adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti totam animi, in atque, consequatur nemo iusto nesciunt debitis esse iste voluptates nobis ipsum recusandae quaerat. Laudantium maiores, tempore officia ipsam impedit
-              enim.. </h5>
-            </p>
-          </div>
-        </div>
-      </div>
- 
-        <!-- paragraph -->
-        <div class="carousel-item-active">
-          <img src="./assests/Picture1.png" class="d-block w-50%  " alt="...">
-        </div>
-        <div class="para">
-      <h1> Modern Business Features</h1>
-      <div><h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, c perspiciatis.</h5></div>
-      <br>
-      <h4> <li>Bootstraop</li></h4>
-      <h5> <li>jQuery</li></h5>
-      <h5> <li>Font Awesome</li></h5>
-      <h5> <li>Working contact from with validation</li></h5>
-      <h5> <li>Unstyled page elements for easy customization</li></h5>
-      <br>
-      <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates commodi<br> sed, a ab iste esse eos sapiente dolorem quo suscipit natus, distinctio ad<br> numquam voluptate asperiores officiis qui excepturi ex quidem laboriosam.<br> Labore blanditiis ipsum numquam sit pariatur id dolor praesentium! Tempora<br> vitae suscipit doloremque labore deleniti quo sit expedita.</h5>
-    </div>      
+      <div class="card-footer"><button class="px-4 btn btn-primary">Learn More</button></div>
     </div>
+   </div>
+   <!-- 2 -->
+   <div class="col-md-4 mb-2">
+  <div class="card mb-3 pb-50" style="height: 60vh;">
+    <div class="card-header"><h4>Card Title</h4></div>
+    <div class="card-body">
+    <h6><p class="card-text">Some quick example text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus libero assumenda ut quo dolore temporibus repellat doloribus provident aliquid consectetur! to Lorem ipsum dolor sit amet. build Lorem ipsum nulla inventore iste vero reiciendis dolorem alias harum! on the card title and make up the bulk of the card's content.</p></h6>
+    </div>
+    <div class="card-footer"><button class="px-4 btn btn-primary">Learn More</button></div>
+  </div>
+ </div>
+ <!-- 3 -->
+ <div class="col-md-4 mb-2">
+   <div class="card mb-3 pb-50" style="height: 60vh;">
+    <div class="card-header"><h4>Card Title</h4></div>
+       <div class="card-body">
+         <h6><p class="card-text">Some quick example text to build on the card title and make up the Lorem ipsum dolor sit amet. bulk of the card's content.</p></h6>  
+       </div>
+    <div class="card-footer">
+      <button class="px-4 btn btn-primary">Learn More</button>
+    </div>
+   </div>
+</div>
+</div>
+    <!-- phase-3 -->
+    <h1 class="my-3">Portfolio Heading</h1>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="./assests/place holder 1.png" class="card-img-top " alt="">
+            <div class="card-body">
+              <h4 class="card-title text-primary">Project One</h4>
+            <h6><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum debitis eos quia. Reiciendis quae laudantium vel dicta illum corrupti Lorem ipsum dolor sit amet, consectetur  sit amet. Asperiores, quam. blanditiis.</p></h6>
+            </div>
+           
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="./assests/place holder 1.png" class="card-img-top " alt="">
+            <div class="card-body">
+              <h4 class="card-title text-primary">Project Two</h4>
+            <h6><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum debitis eos quia. Reiciendis quae laudantium vel dicta illum corrupti Lorem ipsum dolor sit amet, consectetur  sit amet. Asperiores, quam. blanditiis.</p></h6>
+            </div>
+           
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="./assests/place holder 1.png" class="card-img-top " alt="">
+            <div class="card-body">
+              <h4 class="card-title text-primary">Project Three</h4>
+            <h6><p class="card-text">This is a wider card with consectetur adipisicing elit. Corporis tempore quidem un natural lead-inmet consectetur adipisicing elit. Illum debitis eos quia. Reiciendis quae laudantium vel dicta illum corrupti Lorem ipsum dolor sit amet, consectetur  sit amet. Asperiores, quam. blanditiis.</p></h6>
+            </div>
+           
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="./assests/place holder 1.png" class="card-img-top " alt="">
+            <div class="card-body">
+              <h4 class="card-title text-primary">Project Four</h4>
+            <h6><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum debitis eos quia. Reiciendis quae laudantium vel dicta illum corrupti Lorem ipsum dolor sit amet, consectetur  sit amet. Asperiores, quam. blanditiis.</p></h6>
+            </div>
+           
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="./assests/place holder 1.png" class="card-img-top" alt="">
+            <div class="card-body">
+              <h4 class="card-title text-primary">Project Five</h4>
+            <h6><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum debitis eos quia. Reiciendis quae laudantium vel dicta illum corrupti Lorem ipsum dolor sit amet, consectetur  sit amet. Asperiores, quam. blanditiis.</p></h6>
+            </div>
+           
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="./assests/place holder 1.png" class="card-img-top" alt="">
+            <div class="card-body">
+              <h4 class="card-title text-primary">Project Six</h4>
+            <h6><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum debitis eos quia. Reiciendis quae laudantium vel dicta illum corrupti Lorem ipsum dolor sit amet, consectetur  sit amet. Asperiores, quam. blanditiis.</p></h6>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-7 mt-5">
+        <h1>Modrn Business Features</h1>
+        <h6>The Modern Business template by Start Bootstrao includes:</h6>
+        <ul>
+          <li><h5>BootStrap V4</h5></li>
+          <li><h6>jQuery</h6></li>
+          <li><h6>Font Awsome</h6></li>
+          <li><h6>Working contact form with validation</h6></li>
+          <li><h6>Unstyled page elements for east customization</h6></li>
+        </ul>
+        <h6>laudantium quaerat est, asperiores praesentium sunt nam sequi excepturi in? amet Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis tempora dolores earum nulla soluta inventore eveniet voluptatibus error corporis maxime? consectetur adipisicing elit. Quas numquam nostrum repudiandae molestiae optio vel quasi. Recusandae alias quibusdam mol
+          estiae eliarum, inventore veniam ut quas numquam ea.</h6>
+       </div>
+        <div class="col-md-5 mt-5">
+         <img src="./assests/last img placeH.png" class="img-fluid" >
+        </div>
+      </div>
+      <hr class="mt-4"/>
+      <div class="row mt-4">
+       <div class="col-md-8">
+        <h6>Lorem ipsum dolor sit amet consectetur elit. Corrupti ipsa aperiam perspiciatis iure, nisi distinctio quas, porro animi laudantium cum totam odio quam accusantium consequuntur doloremque aut, quibusdam rerum qui amet! Provident magni numquam architecto eos earum minima animi fugit.</h6>
+       </div>
+       <div class="col-md-4">
+        <button class="btn btn-secondary bg-graye col-12" style="padding: 5px 100px;">Call to Action</button>
+       </div>
+      </div>
+    </div>
+      <div class="row bg-dark">
+        <div class="col-md-4 col-12 py-5 futer"></div>
+        <div class="col-md-4 col-12 text-white py-4 mt-2 text-center"><p>Copyright &#169;Your Website 2022</p></div>
+        <div class="col-md-4 col-12 futr"></di v>
+      </div>
+      
+
+
+
+
+   
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
