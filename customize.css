@@ -1,0 +1,42 @@
+.carosel-height {
+  height: 70vh;
+}
+.carosal-image {
+  height: 70vh;
+}
+@media only screen and (min-width: 767px) {
+  .navbar {
+    display: flex !important;
+  }
+  .burger {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .navbar {
+    display: none !important;
+  }
+  .burger {
+    display: flex !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .futer {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .futr {
+    padding-right: 100px;
+  }
+}
+@media only screen and (max-width: 1180px) and (min-width: 820) {
+  .phase {
+    height: 10vh !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  h6 {
+    text-align: justify;
+  }
+}
